@@ -10,6 +10,13 @@ int main()
 	ar.PushBack(1);
 	ar.PushBack(2);
 	ar.PushBack(3);
+	ar.PushBack(4);
+	ar.PushBack(5);
+	ar.PushBack(4);
+	ar.PushBack(3);
+	ar.PushBack(6);
+	ar.Print();
+	ar.Remove(4);
 	ar.Print();
 	ar.PushFront(4);
 	ar.Print();

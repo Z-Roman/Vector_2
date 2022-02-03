@@ -47,6 +47,8 @@ public:
 
 	void RemoveAt(int index); //удаление элемента по указанному индексу
 
+	void Remove(int value); //удаление одного или всех элементов, значение которых совпадает со значением переданного параметра
+
 	bool IsEmpty() const;
 	void Print() const;
 };

@@ -49,7 +49,7 @@ void Vector::Insert(int index, int value)
 	size++;
 }
 
-void Vector::RemoveAt(int index)
+void Vector::RemoveAt(int index) //удаление элемента по указанному индексу
 {
 	if (index < size)
 	{
@@ -60,6 +60,14 @@ void Vector::RemoveAt(int index)
 		size--;
 	}
 	else cout << "no such index\n";
+}
+
+void Vector::Remove(int value)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (data[i] == value) RemoveAt(i);
+	}
 }
 
 bool Vector::IsEmpty() const
@@ -79,6 +87,7 @@ void Vector::Print() const
 		{
 			cout << data[i] << " ";
 		}
+		cout << "   Size = " << size;
 		cout << "\n";
 	}
 }
