@@ -9,9 +9,9 @@ void Vector::EnsureCapacity(int new_size)
 		for (int i = 0; i < size; i++)
 		{
 			copy[i] = data[i];
-			delete[] data;
-			data = copy;
 		}
+		delete[] data;
+		data = copy;
 	}
 }
 
