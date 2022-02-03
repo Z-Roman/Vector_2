@@ -100,6 +100,18 @@ void Vector::TrimToSize()  //метод подгоняет значение capacity под size
 	}
 }
 
+int Vector::IndexOf(int value)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (data[i] == value)
+		{
+			return i;
+		}
+		if (i == size - 1) return -1;
+	}
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())

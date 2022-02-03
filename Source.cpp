@@ -2,8 +2,6 @@
 #include "Vector.h"
 using namespace std;
 
-
-
 int main()
 {
 	Vector ar;
@@ -37,6 +35,8 @@ int main()
 	ar.Print();
 	ar.TrimToSize();
 	ar.Print();
+	ar.IndexOf(3);
+	cout << "IndexOf 1 - " << ar.IndexOf(1) << "\n";
 	ar.Clear();
 	ar.Print();
 }
