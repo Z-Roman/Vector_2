@@ -40,31 +40,11 @@ public:
 		return capacity;
 	}
 
-	void PushBack(int value);
-	void PushFront(int value);
+	void PushBack(int value); //добавление элемента в конец массива
+	void PushFront(int value); //добавление элемента в начало массива
 	void Clear(); //обнуление массива
-
-	bool IsEmpty() const
-	{
-		return size == 0;
-	}
-
-	void Print() const
-	{
-		if (IsEmpty())
-		{
-			cout << "Vector is empty.\n";
-		}
-		else
-		{
-			for (int i = 0; i < size; i++)
-			{
-				cout << data[i] << " ";
-			}
-			cout << endl;
-		}
-	}
-
-	// остальные методы обязательно появятся здесь ;)
+	void Insert(int index, int value); //вставка элемента по указанному индексу
+	bool IsEmpty() const;
+	void Print() const;
 };
 

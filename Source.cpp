@@ -13,6 +13,8 @@ int main()
 	ar.Print();
 	ar.PushFront(4);
 	ar.Print();
+	ar.Insert(2, 10);
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }

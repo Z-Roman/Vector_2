@@ -38,3 +38,35 @@ void Vector::Clear() //обнуление массива
 	size = 0;
 }
 
+void Vector::Insert(int index, int value)
+{
+	EnsureCapacity(size + 1);
+	for (int i = size; i > index; i--)
+	{
+		data[i] = data[i - 1];
+	}
+	data[index] = value;
+	size++;
+}
+
+bool Vector::IsEmpty() const
+{
+	return size == 0;
+}
+
+void Vector::Print() const
+{
+	if (IsEmpty())
+	{
+		cout << "Vector is empty.\n";
+	}
+	else
+	{
+		for (int i = 0; i < size; i++)
+		{
+			cout << data[i] << " ";
+		}
+		cout << "\n";
+	}
+}
+
