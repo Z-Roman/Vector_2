@@ -12,6 +12,7 @@ class Vector
 
 public:
 	Vector() : Vector(10){}
+
 	Vector(int capacity)
 	{
 		if (capacity < 10)
@@ -21,6 +22,7 @@ public:
 		this->capacity = capacity;
 		data = new int[capacity];
 	}
+
 	~Vector()
 	{
 		cout << "DESTRUCTOR!\n";
@@ -44,11 +46,10 @@ public:
 	void PushFront(int value); //добавление элемента в начало массива
 	void Clear(); //обнуление массива
 	void Insert(int index, int value); //вставка элемента по указанному индексу
-
 	void RemoveAt(int index); //удаление элемента по указанному индексу
-
 	void Remove(int value); //удаление одного или всех элементов, значение которых совпадает со значением переданного параметра
-
+	void PopFront(); // удаление первого элемента из массива
+	void PopBack(); // удаление последнего элемента из массива
 	bool IsEmpty() const;
 	void Print() const;
 };

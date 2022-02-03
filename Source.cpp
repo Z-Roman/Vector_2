@@ -26,6 +26,15 @@ int main()
 	ar.Print();
 	ar.RemoveAt(22);
 	ar.Print();
+	ar.PushBack(1);
+	ar.PushBack(2);
+	ar.PushBack(3);
+	ar.PushBack(4);
+	ar.Print();
+	ar.PopFront();
+	ar.Print();
+	ar.PopBack();
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }

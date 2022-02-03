@@ -70,6 +70,18 @@ void Vector::Remove(int value)
 	}
 }
 
+void Vector::PopFront()
+{
+	RemoveAt(0);
+}
+
+void Vector::PopBack()
+{
+	RemoveAt(size - 1);
+}
+
+
+
 bool Vector::IsEmpty() const
 {
 	return size == 0;
@@ -87,7 +99,7 @@ void Vector::Print() const
 		{
 			cout << data[i] << " ";
 		}
-		cout << "   Size = " << size;
+		cout << "   Size = " << size << "\tCapacity = " << capacity;
 		cout << "\n";
 	}
 }
