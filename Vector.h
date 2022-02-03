@@ -44,6 +44,9 @@ public:
 	void PushFront(int value); //добавление элемента в начало массива
 	void Clear(); //обнуление массива
 	void Insert(int index, int value); //вставка элемента по указанному индексу
+
+	void RemoveAt(int index); //удаление элемента по указанному индексу
+
 	bool IsEmpty() const;
 	void Print() const;
 };

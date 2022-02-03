@@ -15,6 +15,10 @@ int main()
 	ar.Print();
 	ar.Insert(2, 10);
 	ar.Print();
+	ar.RemoveAt(1);
+	ar.Print();
+	ar.RemoveAt(22);
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }

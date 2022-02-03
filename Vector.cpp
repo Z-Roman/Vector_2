@@ -49,6 +49,19 @@ void Vector::Insert(int index, int value)
 	size++;
 }
 
+void Vector::RemoveAt(int index)
+{
+	if (index < size)
+	{
+		for (int i = index; i < size - 1; i++)
+		{
+			data[i] = data[i + 1];
+		}
+		size--;
+	}
+	else cout << "no such index\n";
+}
+
 bool Vector::IsEmpty() const
 {
 	return size == 0;
