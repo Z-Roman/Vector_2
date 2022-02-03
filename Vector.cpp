@@ -108,8 +108,20 @@ int Vector::IndexOf(int value)
 		{
 			return i;
 		}
-		if (i == size - 1) return -1;
 	}
+	return -1;
+}
+
+int Vector::LastIndexOf(int value)
+{
+	for (int i = size - 1; i > -1; i--)
+	{
+		if (data[i] == value)
+		{
+			return i;
+		}
+	}
+	return -1;
 }
 
 void Vector::Print() const
