@@ -51,6 +51,7 @@ public:
 	void PopFront(); // удаление первого элемента из массива
 	void PopBack(); // удаление последнего элемента из массива
 	bool IsEmpty() const;
+	void TrimToSize(); //метод подгоняет значение capacity под size
 	void Print() const;
 };
 

@@ -80,11 +80,24 @@ void Vector::PopBack()
 	RemoveAt(size - 1);
 }
 
-
-
 bool Vector::IsEmpty() const
 {
 	return size == 0;
+}
+
+void Vector::TrimToSize()  //метод подгоняет значение capacity под size
+{
+	if (capacity != size)
+	{
+		int* temp = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			temp[i] = data[i];
+		}
+		delete[] data;
+		capacity = size;
+		data = temp;
+	}
 }
 
 void Vector::Print() const

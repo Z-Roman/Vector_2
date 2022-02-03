@@ -35,6 +35,8 @@ int main()
 	ar.Print();
 	ar.PopBack();
 	ar.Print();
+	ar.TrimToSize();
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }
