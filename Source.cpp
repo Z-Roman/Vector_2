@@ -37,6 +37,8 @@ int main()
 	ar.Print();
 	cout << "IndexOf 1 - " << ar.IndexOf(1) << "\n";
 	cout << "LastIndexOf 3 - " << ar.LastIndexOf(3) << "\n";
+	ar.Reverse();
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }

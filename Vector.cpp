@@ -126,7 +126,15 @@ int Vector::LastIndexOf(int value)
 
 void Vector::Reverse()
 {
-
+	int* temp = new int[size];
+	int j = size - 1;
+	for (int i = 0; i < size; i++)
+	{
+		temp[j] = data[i];
+		j--;
+	}
+	delete[] data;
+	data = temp;
 }
 
 void Vector::Print() const
