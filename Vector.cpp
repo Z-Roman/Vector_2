@@ -191,6 +191,15 @@ void Vector::Shuffle() // случайное перемешивание элементов массива
 	}
 }
 
+void Vector::RandomFill() // заполнение массива случайными значениями
+{
+	srand(time(0));
+	for (int i = 0; i < size; i++)
+	{
+		data[i] = rand() % 101;
+	}
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())

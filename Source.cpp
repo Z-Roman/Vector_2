@@ -49,6 +49,8 @@ int main()
 	ar.Print();
 	ar.Shuffle();
 	ar.Print();
+	ar.RandomFill();
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }
