@@ -124,6 +124,11 @@ int Vector::LastIndexOf(int value)
 	return -1;
 }
 
+void Vector::Reverse()
+{
+
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())
