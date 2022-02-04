@@ -175,6 +175,22 @@ void Vector::SortDesc() // быстрая сортировка значений элементов массива по убыв
 	} while (j != 0);
 }
 
+void Vector::Shuffle() // случайное перемешивание элементов массива
+{
+	srand(time(0));
+	for (int i = 0; i < size * 2; i++)
+	{
+		int a = rand() % size;
+		int b = rand() % size;
+		if (a != b)
+		{
+			int temp = data[a];
+			data[a] = data[b];
+			data[b] = temp;
+		}
+	}
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())

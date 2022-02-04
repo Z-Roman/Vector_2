@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 class Vector
@@ -57,6 +58,7 @@ public:
 	void Reverse(); // изменение порядка следования элементов в массиве на противоположный
 	void SortAsc(); // быстрая сортировка значений элементов массива по возрастанию
 	void SortDesc(); // быстрая сортировка значений элементов массива по убыванию
+	void Shuffle(); // случайное перемешивание элементов массива
 	void Print() const;
 };
 

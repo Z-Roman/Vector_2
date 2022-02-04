@@ -43,6 +43,12 @@ int main()
 	ar.Print();
 	ar.SortDesc();
 	ar.Print();
+	ar.Shuffle();
+	ar.Print();
+	ar.Shuffle();
+	ar.Print();
+	ar.Shuffle();
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }
