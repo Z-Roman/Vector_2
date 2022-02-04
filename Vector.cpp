@@ -214,7 +214,6 @@ bool Vector::Equals(const Vector& other) // в качестве параметра передаётся указ
 		return true;
 	}
 	else return false;
-
 }
 
 void Vector::Print() const

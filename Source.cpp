@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
 	Vector ar;
+	Vector ar2;
 	ar.PushBack(1);
 	ar.PushBack(2);
 	ar.PushBack(3);
@@ -13,7 +14,18 @@ int main()
 	ar.PushBack(4);
 	ar.PushBack(3);
 	ar.PushBack(6);
+	ar2.PushBack(1);
+	ar2.PushBack(2);
+	ar2.PushBack(3);
+	ar2.PushBack(4);
+	ar2.PushBack(5);
+	ar2.PushBack(4);
+	ar2.PushBack(3);
+	ar2.PushBack(6);
 	ar.Print();
+	ar2.Print();
+	ar.Equals(ar2);
+	cout << ar.Equals(ar2) <<"\n";
 	ar.Remove(4);
 	ar.Print();
 	ar.PushFront(4);
