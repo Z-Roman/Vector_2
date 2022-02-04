@@ -137,6 +137,25 @@ void Vector::Reverse()
 	data = temp;
 }
 
+void Vector::SortAsc()  // быстрая сортировка значений элементов массива по возрастанию
+{	
+	int j;
+	do
+	{
+		j = 0;
+		for (int i = 0; i < size - 1; i++)
+		{
+			if (data[i] > data[i + 1])
+			{
+				int temp = data[i];
+				data[i] = data[i + 1];
+				data[i + 1] = temp;
+				j++;
+			}
+		}
+	} while (j != 0);	
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())
