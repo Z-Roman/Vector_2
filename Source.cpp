@@ -41,6 +41,8 @@ int main()
 	ar.Print();
 	ar.SortAsc();
 	ar.Print();
+	ar.SortDesc();
+	ar.Print();
 	ar.Clear();
 	ar.Print();
 }
