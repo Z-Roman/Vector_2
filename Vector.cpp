@@ -200,6 +200,23 @@ void Vector::RandomFill() // заполнение массива случайными значениями
 	}
 }
 
+bool Vector::Equals(const Vector& other) // в качестве параметра передаётся указатель на другой вектор.Метод сравнивает массивы не только по количеству элементов, но и по их содержимому
+{
+	if (size == other.size)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			if (data[i] != other.data[i])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	else return false;
+
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())
