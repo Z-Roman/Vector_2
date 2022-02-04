@@ -216,6 +216,18 @@ bool Vector::Equals(const Vector& other) // в качестве параметра передаётся указ
 	else return false;
 }
 
+int Vector::GetElementAt(int index)  //возврат копии элемента массива по указанному индексу, с проверкой на выход за пределы массива
+{
+	int copy;
+	if (index >= 0 && index < size)
+	{
+		copy = data[index];
+		return copy;
+	}
+	else cout << "index outside of the array\n";
+	return 0;
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())

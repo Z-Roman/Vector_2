@@ -63,6 +63,7 @@ int main()
 	ar.Print();
 	ar.RandomFill();
 	ar.Print();
+	cout << "GetElementAt(2) - " << ar.GetElementAt(2) << "\n";
 	ar.Clear();
 	ar.Print();
 }
