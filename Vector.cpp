@@ -228,6 +228,18 @@ int Vector::GetElementAt(int index)  //возврат копии элемента массива по указанн
 	return 0;
 }
 
+void Vector::Clone(const Vector& array_to_copy) // метод создаёт точную копию вектора
+{
+	int* copy = new int[array_to_copy.size];
+
+	copy= data;
+	/*for (int i = 0; i <= array_to_copy.size; i++)
+	{
+		cout << copy[i] << " ";
+	}
+	cout << "\n";*/
+}
+
 void Vector::Print() const
 {
 	if (IsEmpty())

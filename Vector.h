@@ -42,7 +42,6 @@ public:
 	{
 		return capacity;
 	}
-
 	void PushBack(int value); //добавление элемента в конец массива
 	void PushFront(int value); //добавление элемента в начало массива
 	void Clear(); //обнуление массива
@@ -62,6 +61,7 @@ public:
 	void RandomFill(); // заполнение массива случайными значениями
 	bool Equals(const Vector& other); // в качестве параметра передаётся указатель на другой вектор.Метод сравнивает массивы не только по количеству элементов, но и по их содержимому
 	int GetElementAt(int index);  //возврат копии элемента массива по указанному индексу, с проверкой на выход за пределы массива
+	void Clone(const Vector& array_to_copy); // метод создаёт точную копию вектора
 	void Print() const;
 };
 
