@@ -26,8 +26,21 @@ public:
 
 	~Vector()
 	{
-		cout << "DESTRUCTOR!\n";
+		cout << "DESTRUCTOR! " << this << "\n";
 		if (data != nullptr) delete[] data;
+	}
+
+	Vector(const Vector& other) //copy constructor
+	{
+		this->size = other.size;
+		this->capacity = other.capacity;
+
+		this->data = new int[other.capacity];
+		for (int i = 0; i < other.size; i++)
+		{
+			this->data[i] = other.data[i];
+		}
+		cout << "Copy consructor " << this << "\n";
 	}
 
 	void SetCapacity(int capacity)

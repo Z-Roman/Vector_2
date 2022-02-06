@@ -232,7 +232,7 @@ void Vector::Clone(const Vector& array_to_copy) // метод создаёт точную копию ве
 {
 	int* copy = new int[array_to_copy.size];
 
-	copy= data;
+	copy = data;
 	/*for (int i = 0; i <= array_to_copy.size; i++)
 	{
 		cout << copy[i] << " ";

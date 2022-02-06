@@ -63,8 +63,11 @@ int main()
 	ar.Print();
 	ar.RandomFill();
 	ar.Print();
-	cout << "GetElementAt(2) - " << ar.GetElementAt(2) << "\n";
+	cout << "GetElementAt(2): " << ar.GetElementAt(2) << "\n";
 	ar.Clone(ar2);
+	ar.Print();
+	Vector ar3(ar);
+	ar3.Print();
 	ar.Clear();
 	ar.Print();
 }
