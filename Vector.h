@@ -3,13 +3,15 @@
 #include <ctime>
 using namespace std;
 
+template <typename T>
+
 class Vector
 {
-	int size = 0; // количество действительно присутствующих элементов в контейнере
-	int capacity = 10; // ёмкость (вместительность, запас памяти)
-	int* data; // указатель на динамический массив данных
+	unsigned int size = 0; // количество действительно присутствующих элементов в контейнере
+	unsigned int capacity = 10; // ёмкость (вместительность, запас памяти)
+	T* data; // указатель на динамический массив данных
 
-	void EnsureCapacity(int new_size);
+	void EnsureCapacity(unsigned int new_size);
 
 public:
 	Vector() : Vector(10){}
@@ -21,7 +23,7 @@ public:
 			capacity = 10;
 		}
 		this->capacity = capacity;
-		data = new int[capacity];
+		data = new T[capacity];
 	}
 
 	~Vector()
@@ -35,7 +37,7 @@ public:
 		this->size = other.size;
 		this->capacity = other.capacity;
 
-		this->data = new int[other.capacity];
+		this->data = new T[other.capacity];
 		for (int i = 0; i < other.size; i++)
 		{
 			this->data[i] = other.data[i];
@@ -43,7 +45,7 @@ public:
 		cout << "Copy consructor " << this << "\n";
 	}
 
-	void SetCapacity(int capacity)
+	void SetCapacity(unsigned int capacity)
 	{
 		this->capacity = capacity;
 	}
@@ -55,7 +57,7 @@ public:
 	{
 		return capacity;
 	}
-	void PushBack(int value); //добавление элемента в конец массива
+	void PushBack(T value); //добавление элемента в конец массива
 	void PushFront(int value); //добавление элемента в начало массива
 	void Clear(); //обнуление массива
 	void Insert(int index, int value); //вставка элемента по указанному индексу
@@ -74,7 +76,7 @@ public:
 	void RandomFill(); // заполнение массива случайными значениями
 	bool Equals(const Vector& other); // в качестве параметра передаётся указатель на другой вектор.Метод сравнивает массивы не только по количеству элементов, но и по их содержимому
 	int GetElementAt(int index);  //возврат копии элемента массива по указанному индексу, с проверкой на выход за пределы массива
-	void Clone(const Vector& array_to_copy); // метод создаёт точную копию вектора
+	void Clone(const Vector& vector); // метод создаёт точную копию вектора
 	void Print() const;
 };
 

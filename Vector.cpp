@@ -1,11 +1,13 @@
 #include "Vector.h"
 
-void Vector::EnsureCapacity(int new_size)
+template <typename T>
+
+void Vector::EnsureCapacity(unsigned int new_size)
 {
 	if (capacity < new_size)
 	{
 		capacity = capacity * 3 / 2 + 1;
-		int* copy = new int[capacity];
+		T* copy = new T[capacity];
 		for (int i = 0; i < size; i++)
 		{
 			copy[i] = data[i];
@@ -15,7 +17,7 @@ void Vector::EnsureCapacity(int new_size)
 	}
 }
 
-void Vector::PushBack(int value)
+void Vector::PushBack(T value)
 {
 	EnsureCapacity(size + 1); // проверка, хватит ли места для нового элемента
 	data[size++] = value;
@@ -228,12 +230,12 @@ int Vector::GetElementAt(int index)  //возврат копии элемента массива по указанн
 	return 0;
 }
 
-void Vector::Clone(const Vector& array_to_copy) // метод создаёт точную копию вектора
+void Vector::Clone(const Vector& vector) // метод создаёт точную копию вектора
 {
-	int* copy = new int[array_to_copy.size];
+	int* copy = new int[vector.size];
 
 	copy = data;
-	/*for (int i = 0; i <= array_to_copy.size; i++)
+	/*for (int i = 0; i <= vector.size; i++)
 	{
 		cout << copy[i] << " ";
 	}

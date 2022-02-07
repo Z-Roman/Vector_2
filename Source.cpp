@@ -2,6 +2,8 @@
 #include "Vector.h"
 using namespace std;
 
+template <typename T>
+
 int main()
 {
 	Vector ar;
