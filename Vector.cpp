@@ -35,6 +35,20 @@ Vector& Vector::operator=(const Vector& other) //перегрузка оператора =
 	return *this;
 }
 
+bool Vector::operator==(const Vector& other) // перегрузка оператора ==
+{
+	if (this->size == other.size)
+	{
+		for (int i = 0; i < other.size; i++)
+		{
+			if (this->data[i] != other.data[i]) return false;
+		}
+	}
+	else return false;
+	return true;
+}
+
+
 void Vector::PushBack(int value)
 {
 	EnsureCapacity(size + 1); // проверка, хватит ли места для нового элемента

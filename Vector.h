@@ -45,6 +45,10 @@ public:
 
 	Vector& operator = (const Vector& other); //перегрузка оператора =
 
+	bool operator==(const Vector& other); // перегрузка оператора ==
+
+	bool operator!=(const Vector& other); // перегрузка оператора !=
+
 	void SetCapacity(int capacity)
 	{
 		this->capacity = capacity;
