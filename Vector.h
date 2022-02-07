@@ -43,6 +43,8 @@ public:
 		cout << "Copy consructor " << this << "\n";
 	}
 
+	Vector& operator = (const Vector& other); //перегрузка оператора =
+
 	void SetCapacity(int capacity)
 	{
 		this->capacity = capacity;

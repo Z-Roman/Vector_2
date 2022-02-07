@@ -15,6 +15,26 @@ void Vector::EnsureCapacity(int new_size)
 	}
 }
 
+Vector& Vector::operator=(const Vector& other) //перегрузка оператора =
+{
+	this->size = other.size;
+	this->capacity = other.capacity;
+
+	if (this->data != nullptr)
+	{
+		delete[] this->data;
+	}
+
+	this->data = new int[other.capacity];
+
+	for (int i = 0; i < other.size; i++)
+	{
+		this->data[i] = other.data[i];
+	}
+
+	return *this;
+}
+
 void Vector::PushBack(int value)
 {
 	EnsureCapacity(size + 1); // проверка, хватит ли места для нового элемента

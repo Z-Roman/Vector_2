@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+	setlocale(0, "");
+
 	Vector ar;
 	Vector ar2;
 	ar.PushBack(1);
@@ -68,6 +70,10 @@ int main()
 	ar.Print();
 	Vector ar3(ar);
 	ar3.Print();
+	Vector ar4;
+	cout << "Перегрузка оператора =:\n";
+	ar4 = ar3;
+	ar4.Print();
 	ar.Clear();
 	ar.Print();
 }
