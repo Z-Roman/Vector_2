@@ -80,6 +80,9 @@ int main()
 	result = ar3 == ar4;
 	cout << "Перегрузка оператора ==:" << result << "\n";  //true
 
+	ar.Print();
+	cout << "Перегрузка оператора []:" << ar[2] << "\n";  //true
+
 	ar.Clear();
 	ar.Print();
 }

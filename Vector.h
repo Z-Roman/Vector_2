@@ -47,7 +47,7 @@ public:
 
 	bool operator==(const Vector& other); // перегрузка оператора ==
 
-	bool operator!=(const Vector& other); // перегрузка оператора !=
+	int& operator[](int index);// перегрузка оператора []
 
 	void SetCapacity(int capacity)
 	{

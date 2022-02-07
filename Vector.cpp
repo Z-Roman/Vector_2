@@ -48,6 +48,11 @@ bool Vector::operator==(const Vector& other) // перегрузка оператора ==
 	return true;
 }
 
+int& Vector::operator[](int index) // перегрузка оператора []
+{
+	return data[index];
+}
+
 
 void Vector::PushBack(int value)
 {
