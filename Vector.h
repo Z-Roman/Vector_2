@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <ctime>
+#include <Windows.h>
 using namespace std;
 
 class Vector
@@ -48,6 +49,10 @@ public:
 	bool operator==(const Vector& other); // перегрузка оператора ==
 
 	int& operator[](int index);// перегрузка оператора []
+
+	friend istream& operator>>(istream& is, Vector& original);// перегрузка оператора >>
+
+	friend ostream& operator<<(ostream& os, Vector& original); // перегрузка оператора <<
 
 	void SetCapacity(int capacity)
 	{

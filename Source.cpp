@@ -76,12 +76,15 @@ int main()
 	ar4.Print();
 
 	bool result = ar == ar2;
-	cout << "Перегрузка оператора ==:" << result << "\n";  //false
+	cout << "Перегрузка оператора ==: " << result << "\n";  //false
 	result = ar3 == ar4;
-	cout << "Перегрузка оператора ==:" << result << "\n";  //true
+	cout << "Перегрузка оператора ==: " << result << "\n";  //true
 
 	ar.Print();
-	cout << "Перегрузка оператора []:" << ar[2] << "\n";  //true
+	cout << "Перегрузка оператора []: ar[2] = " << ar[2] << "\n";
+
+	cout << "Перегрузка оператора <<: ar \n";
+	cout << ar;
 
 	ar.Clear();
 	ar.Print();

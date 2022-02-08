@@ -296,3 +296,17 @@ void Vector::Print() const
 	}
 }
 
+istream& operator>>(istream& is, Vector& original)// перегрузка оператора >>
+{
+	for (int i = 0; i <= original.size; i++)
+	{
+		is >> original.data[i];
+	}
+	return is;
+}
+
+ostream& operator<<(ostream& os, Vector& original) // перегрузка оператора <<
+{
+	original.Print();
+	return os;
+}
