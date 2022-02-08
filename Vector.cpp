@@ -101,7 +101,7 @@ void Vector::RemoveAt(int index) //удаление элемента по указанному индексу
 	else cout << "no such index\n";
 }
 
-void Vector::Remove(int value)
+void Vector::Remove(int value)  //удаление одного или всех элементов, значение которых совпадает со значением переданного параметра
 {
 	for (int i = 0; i < size; i++)
 	{
